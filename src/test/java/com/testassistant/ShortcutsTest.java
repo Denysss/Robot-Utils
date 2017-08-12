@@ -1,6 +1,5 @@
 package com.testassistant;
 
-import com.testassistant.Shortcuts;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,8 +13,8 @@ public class ShortcutsTest {
 
     @Test(dataProvider = "getShortcuts")
     public void Shortcuts_length(Shortcuts shortcuts) {
-        int expectedLength = 2;
-        Assert.assertEquals(shortcuts.get().length, expectedLength, "Verify number of keyCodes in all shortcuts");
+        int len = shortcuts.get().length;
+        Assert.assertTrue(len == 2 || len == 1, "Verify number of keyCodes in all shortcuts");
     }
 
     @DataProvider

@@ -49,6 +49,6 @@ public class RobotUtilsTest {
 
     @BeforeMethod
     public void setDefaultRobot() {
-        RobotUtils.setDefaultRobot();
+        RobotUtils.clearCustomRobot();
     }
 }
